@@ -1,6 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 *::selection {
     background: #fcfc92;
     color: black;
+}
+
+body {
+    margin-bottom: 5rem;
 }
 
 #header {
@@ -68,15 +77,14 @@
     font-size: 1.5rem;
 }
 
-.two-column {
+.two-col {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 1rem;
 }
 
-.two-column  p{
-    margin-top: -1rem;
+.job-body {
+    margin: 20px;
 }
 
 button {
