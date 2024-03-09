@@ -24,16 +24,13 @@
     <div id="container">
 
         <div id="header">
+            <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
             <div id="navigation">
                 <a href="#" id="logo">Siddharth Nand</a>
                 <a href="#education">Education</a>
                 <a href="#experience">Experience</a>
                 <a href="#papers">Papers</a>
                 <a href="#projects">Projects</a>
-            </div>
-
-            <div id="dark-mode">
-                <button onclick="toggleDark()" id="dark-mode-toggle"><i class="fa-solid fa-moon" style="color: #000000;"></i></button>
             </div>
         </div>
 
@@ -62,11 +59,7 @@
             <div class="degree two-col">
                 <div class="degree-name">
                     <h4>Bachelor of Science in Mathematics</h4>
-                    <p>The University of British Columbia, Vancouver</p>
-                </div>
-
-                <div class="job-date">
-                    <p>Apr. 2024</p>
+                    <p>The University of British Columbia</p>
                 </div>
             </div>
         </div>
@@ -77,17 +70,13 @@
             <div class="job">
                 <div class="two-col">
                     <div class="job-name">
-                        <h4>Computer Science Research Assistant</h4>
-                        <p>The University of British Columbia, Vancouver</p>
-                    </div>
-    
-                    <div class="job-date">
-                        <p>Apr. 2023 - Present</p>
+                        <h4>Game Theory and Researcher</h4>
+                        <p>The University of British Columbia</p>
                     </div>
                 </div>
 
                 <div class="job-body">
-                    Currently working in <a href="https://www.cs.ubc.ca/~kevinlb/" target="_blank">Dr. Kevin Leyton-Brown's</a> lab. I am work on a software called Agora, which facilitates peer grading and participation in large classes. There is also a research paper under review about Agora.
+                    Currently working in <a href="https://www.cs.ubc.ca/~kevinlb/" target="_blank">Dr. Kevin Leyton-Brown's</a> lab. I am work on a software called Agora, which facilitates peer grading and participation in large classes. There is also a paper about Agora. <a href="#link-paper-znbt-2024">[1]</a>
                 </div>
             </div>
 
@@ -95,24 +84,25 @@
                 <div class="two-col">
                     <div class="job-name">
                         <h4>Finance Research Assistant</h4>
-                        <p>The Sauder School of Business, Vancouver</p>
-                    </div>
-                
-                    <div class="job-date">
-                        <p>Sept. 2022 - Feb. 2024</p>
+                        <p>The Sauder School of Business</p>
                     </div>
                 </div>
 
                 <div class="job-body">
-                    Worked with <a href="https://sites.google.com/site/lorenzogarlappi/" target="_blank">Dr. Lorenzo Garlappi</a> on empirically testing portfolio optimization models. <a href="#link-portfolio">[1]</a>
+                    Worked with <a href="https://sites.google.com/site/lorenzogarlappi/" target="_blank">Dr. Lorenzo Garlappi</a> on empirically testing portfolio optimization models. <a href="#link-portfolio">[*]</a>
                 </div>
             </div>
         </div>
 
         <div id="papers" class="section">
             <h2>Papers</h2>
-
-            Coming soon...
+            
+            <ol>
+                <li id="link-paper-znbt-2024">
+                    Hedayat Zarkoob, <strong>Siddharth Nand</strong>, Kevin Leyton-Brown, and Giulia Toti. 2024. Agora: Motivating and Measuring Engagement in Large-Class Discussions (A preprint). In The 29th annual ACM conference on Innovation and Technology in Computer Science Education, July 8-10 2024, Milan. ACM, New York, NY, USA, 7 pages.
+                    <a target="_blank" href="https://www.cs.ubc.ca/~hzarkoob/Agora_paper_ITICSE2024.pdf"><i class="fa-solid fa-file"></i></a>
+                </li>
+            </ol>
         </div>
 
         <div id="projects" class="section">
@@ -134,24 +124,34 @@
 
             <div class="project">
                 <h4 class="project-name">
-                    CMail
-                    <a target="_blank" href="https://github.com/sidnand/CMail"><i class="fa-brands fa-github"></i></a>
-                </h4>
-
-                <div class="project-body">
-                    Created an email service provider using PHP, JavaScript, and Oracle SQL.
-                </div>
-            </div>
-
-            <div class="project">
-                <h4 class="project-name">
-                    Solving Differential Equations with Neural Networks
+                    Physics-informed Neural Network: The Effect of Reparameterization in Solving Differential Equations
                     <a target="_blank" href="https://github.com/sidnand/CPSC-340-Project"><i class="fa-brands fa-github"></i></a>
                     <a target="_blank" href="https://arxiv.org/pdf/2301.12118.pdf"><i class="fa-solid fa-file"></i></a>
                 </h4>
 
                 <div class="project-body">
                     Researched neural network methods for approximating exact solutions to differential equations.
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-name">
+                    Sinc
+                    <a target="_blank" href="https://github.com/sidnand/Sinc"><i class="fa-brands fa-github"></i></a>
+                    <a target="_blank" href="https://chrome.google.com/webstore/detail/sinc-watch-netflix-togeth/hpijhaededegbedhfnamnajebmhbdcla"><i class="fa-solid fa-globe"></i></a>
+                </h4>
+
+                <div class="project-body">Released a Google Chrome extension establishing a virtual Netflix video-sharing space.</div>
+            </div>
+
+            <div class="project">
+                <h4 class="project-name">
+                    CMail
+                    <a target="_blank" href="https://github.com/sidnand/CMail"><i class="fa-brands fa-github"></i></a>
+                </h4>
+
+                <div class="project-body">
+                    Created an email service provider using PHP, JavaScript, and Oracle SQL.
                 </div>
             </div>
 
@@ -175,16 +175,6 @@
                 <div class="project-body">
                     Co-authored a report employing regression models and linear programming to formulate an optimal 2024 provincial government budget based on historical growth and expense data.
                 </div>
-            </div>
-
-            <div class="project">
-                <h4 class="project-name">
-                    Sinc
-                    <a target="_blank" href="https://github.com/sidnand/Sinc"><i class="fa-brands fa-github"></i></a>
-                    <a target="_blank" href="https://chrome.google.com/webstore/detail/sinc-watch-netflix-togeth/hpijhaededegbedhfnamnajebmhbdcla"><i class="fa-solid fa-globe"></i></a>
-                </h4>
-
-                <div class="project-body">Released a Google Chrome extension establishing a virtual Netflix video-sharing space.</div>
             </div>
         </div>
 
