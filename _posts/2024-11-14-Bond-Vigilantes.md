@@ -1,10 +1,10 @@
 ---
-layout: post
+layout: distill
 title: "Déjà Vu in the Bond Market: Bond Vigilantes Are back"
 date: 2024-11-14
 description: In September 2024, the Federal Reserve lowered the federal funds rate 50 basis points. However, long-term yields rose. What gives?
 tags: [economics, finance, monetary policy]
-# categories: [economics]
+bibliography: blog.bib
 ---
 
 The Federal Reserve's recent actions have drawn some striking parallels to the economic climate of the 1970s and 1980s. During that period, the U.S. faced high inflation from 1972 to 1974, peaking at over 12%. In response, the Fed began raising interest rates aggressively, reaching a historic 13% by 1976. This tightening of monetary policy helped cool inflation temporarily. However, as inflation eased, the Fed lowered rates to 4.75% by 1978, believing that the economy was back on track.
@@ -15,11 +15,11 @@ But bond traders, much like today, were not convinced. They expected inflation t
 
 ## The Birth of the Bond Vigilantes
 
-The term *bond vigilantes* was coined by economist **Ed Yardeni** in the early 1980s to describe these bond market participants. They were investors who *vigilantly* monitored inflation and the Fed's actions, selling bonds (and thus driving up yields) whenever they believed the Fed's policies were too lenient or could lead to future inflation. In essence, they acted as a market check on the central bank's actions, pushing interest rates higher when they were concerned about inflation getting out of control.
+The term *bond vigilantes* was coined by economist **Ed Yardeni** <d-cite key="yardeni2018"></d-cite> in the early 1980s to describe these bond market participants. They were investors who *vigilantly* monitored inflation and the Fed's actions, selling bonds (and thus driving up yields) whenever they believed the Fed's policies were too lenient or could lead to future inflation. In essence, they acted as a market check on the central bank's actions, pushing interest rates higher when they were concerned about inflation getting out of control.
 
 ## Fast Forward to Today: Are the Bond Vigilantes Back?
 
-Today, we seem to be seeing the return of the bond vigilantes. Despite the Federal Reserve’s recent rate cuts in 2024, intended to stimulate the economy, bond markets remain cautious. Long-term yields have stayed elevated, indicating that bond traders expect inflation to resurface. Just like their counterparts in the 1970s and 1980s, these investors are skeptical of the Fed’s ability to maintain control over inflation. 
+Today, we seem to be seeing the return of the bond vigilantes. Despite the Federal Reserve’s recent rate cuts in 2024, intended to stimulate the economy, bond markets remain cautious. Long-term yields have stayed elevated, indicating that bond traders expect inflation to resurface. Just like their counterparts in the 1970s and 1980s, these investors are skeptical of the Fed’s ability to maintain control over inflation.
 
 As inflation remains above target, the bond market is signaling that the battle against inflation may not be over yet—and may require more aggressive action from the Fed. This echoes the early 1980s, when the Fed ultimately had to raise rates to a painful 20% to restore price stability.
 
