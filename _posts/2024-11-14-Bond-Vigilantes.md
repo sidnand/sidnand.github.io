@@ -3,7 +3,7 @@ layout: distill
 title: "Déjà Vu in the Bond Market: Bond Vigilantes Are back"
 date: 2024-11-14
 description: In September 2024, the Federal Reserve lowered the federal funds rate 50 basis points. However, long-term yields rose. What gives?
-tags: [economics, finance, monetary policy]
+tags: [economics, finance, monetary policy, bond market]
 bibliography: blog.bib
 ---
 
