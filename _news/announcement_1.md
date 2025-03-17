@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Create a new personal website!
+Create a persnal website!
