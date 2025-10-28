@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: Portfolio Performance
-description: Tool to test the out-of-sample performance of different portfolio optimization strategy
+description: Tool to test the out-of-sample performance of different portfolio optimization strategies.
 img: 
 importance: 1
 bibliography: project-portfolio-optimization.bib
