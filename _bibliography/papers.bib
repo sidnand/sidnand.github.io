@@ -5,15 +5,25 @@
 
 % PERSONAL PUBLICATIONS %
 
+@inproceedings{nand2025pigeons,
+    author = {Nand, Siddharth and Biron-Lattes, Miguel and Tiede, Paul and Syed, Saifuddin and Campbell, Trevor and Bouchard-Coté, Alexandre},
+    title = {Pigeons.jl: Distributed Sampling from Intractable Distributions},
+    booktitle = {Proceedings of JuliaCon},
+    year = {2025},
+    publisher = {JuliaCon},
+    address = {USA},
+    abstract = {Pigeons.jl provides distributed, multithreaded, and single-threaded sampling for complex and multimodal distributions. It guarantees strong parallelism invariance, ensuring identical results for a given seed regardless of hardware configuration. We describe key features and implementation details.},
+    keywords = {distributed computation, Bayesian inference, parallelism invariance, MCMC},
+    pdf = {publications/juliacon.pdf},
+    bibtex_show = {false}
+}
+
 @inproceedings{10.1145/3649217.3653540,
     author = {Zarkoob, Hedayat and Nand, Siddharth and Leyton-Brown, Kevin and Toti, Giulia},
     title = {Agora: Motivating and Measuring Engagement in Large-Class Discussions},
     year = {2024},
-    isbn = {9798400706004},
     publisher = {Association for Computing Machinery},
     address = {New York, NY, USA},
-    url = {https://doi.org/10.1145/3649217.3653540},
-    doi = {10.1145/3649217.3653540},
     abstract = {Cold calling effectively incentivizes all students to actively prepare contributions to a class discussion, but some find it terrifying. Rewarding voluntarily speaking in class is less off-putting, and can be valuable for students who participate; however, it can allow a large fraction of the class to disengage. Agora is an open-source app designed to serve as a middle ground between these extremes, with the added benefit that it automatically produces an assessment of each student's engagement. The key ideas are to give students control over whether their hand is raised or lowered, to choose randomly among students with raised hands, and to give participation credit to all students who were considered every time a speaker is chosen. The system has various other features to facilitate deployment in large classes including multiple queues to support concurrent questions on different topics; a message board to allow students to communicate discretely with the instructor; and polling. We deployed the system in three offerings of a large undergraduate class and demonstrate its effectiveness in terms of learning outcomes, gender balance in participation, and student satisfaction.},
     booktitle = {Proceedings of the 2024 on Innovation and Technology in Computer Science Education V. 1},
     pages = {729-735},
@@ -21,7 +31,45 @@
     keywords = {educational technology, in-class participation},
     location = {Milan, Italy},
     series = {ITiCSE 2024},
-    pdf = {agora_zarkoob_2024.pdf},
-    code = {https://github.com/hezar1000/agora},
-    bibtex_show = {true}
+    pdf = {publications/agora_zarkoob_2024.pdf},
+    bibtex_show = {false}
+}
+
+@inproceedings{nand2025autostep,
+    author = {Nand, Siddharth and Surjanovic, Nikola and Biron-Lattes, Miguel and Bouchard-Coté, Alexandre and Campbell, Trevor},
+    title = {AutoStep: Locally Adaptive Involutive MCMC},
+    booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
+    year = {2025},
+    series = {ICML 2025},
+    publisher = {PMLR},
+    address = {Vancouver, Canada},
+    abstract = {Many Markov chain Monte Carlo kernels can be formulated using deterministic involutive proposals with a step size parameter. AutoStep MCMC adaptively selects step sizes using local geometric information. We prove π-invariance, irreducibility, aperiodicity, and provide bounds on expected energy jump distance and cost per iteration. Experiments show competitive performance with state-of-the-art methods.},
+    pdf = {publications/autostep.pdf},
+    bibtex_show = {false}
+}
+
+@inproceedings{nand2025gibbs_vs_hmc,
+    author = {Nand, Siddharth and Biron-Lattes, Miguel and Xu, Zuheng and Surjanovic, Nikola and Campbell, Trevor and Bouchard-Coté, Alexandre},
+    title = {Is Gibbs Sampling Faster than Hamiltonian Monte Carlo on GLMs?},
+    booktitle = {Proceedings of the 28th International Conference on Artificial Intelligence and Statistics},
+    year = {2025},
+    series = {AISTATS 2025},
+    publisher = {PMLR},
+    address = {Mai Khao, Thailand},
+    abstract = {We exploit compute-graph structure to reduce full-scan Gibbs sampling for GLMs from O(d^2) to O(d), enabling efficient high-dimensional Bayesian inference. We compare effective sample size per time with HMC and give theoretical and empirical conditions under which each method dominates.},
+    pdf = {publications/gibbs_hamiltonian.pdf},
+    bibtex_show = {false}
+}
+
+@article{nand2023hmm_vr,
+    author = {Nand, Siddharth and Heckman, Nancy and Bouchard-Coté, Alexandre and Fortune, Sarah M. E. and Trites, Andrew W. and Auger-Méthé, Marie},
+    title = {Variance-Reduced Stochastic Optimization for Efficient Inference of Hidden Markov Models},
+    journal = {arXiv preprint arXiv:2310.04620},
+    year = {2023},
+    archivePrefix = {arXiv},
+    eprint = {2310.04620},
+    primaryClass = {stat.CO},
+    abstract = {We propose an optimization algorithm that combines partial E-steps with variance-reduced stochastic optimization for efficient fitting of HMMs. The method converges under regularity conditions and outperforms baselines on simulated and biological time-series data.},
+    pdf = {publications/varianced_stochastic_optimization.pdf},
+    bibtex_show = {false}
 }
