@@ -2,8 +2,8 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Dr. Siddharth Nand
-first_name: Dr. Siddharth
+title: Siddharth Nand
+first_name: Siddharth
 middle_name: 
 last_name: Nand
 email: snand233@gmail.com
@@ -11,15 +11,15 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   I am a student at the University of British Columbia in Vancouver. I hold a Ph.D in Statistics. I am interested in the intersection of mathematics, computer science, and statistics. I am also interested in finance and investing.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: dr. siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance
+keywords: siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance
 lang: en
 icon: 
 
 url: https://sidnand.github.io/ # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
-last_updated: true
+last_updated: false
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-back_to_top: true # set to false to disable the back to top button
+back_to_top: false # set to false to disable the back to top button
 
 # -----------------------------------------------------------------------------
 # Theme
@@ -45,7 +45,7 @@ feed:
   categories:
     # - blog
     - publications
-    - projects
+    # - projects
 
 # -----------------------------------------------------------------------------
 # Layout
@@ -53,8 +53,8 @@ feed:
 
 navbar_fixed: true
 footer_fixed: false
-search_enabled: true
-socials_in_search: true
+search_enabled: false
+socials_in_search: false
 bib_search: true
 
 # Dimensions
@@ -82,7 +82,7 @@ dblp_url: # your DBLP profile url
 discord_id: # your discord id (18-digit unique numerical identifier)
 facebook_id: # your facebook id
 flickr_id: # your flickr id
-github_username: sidnand # your GitHub user name
+github_username:  # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
 inspirehep_id:  # Inspire HEP author ID
