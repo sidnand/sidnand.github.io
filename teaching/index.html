@@ -29,14 +29,14 @@
   
   
     
-      teaching | Dr. Siddharth Nand
+      teaching | Siddharth Nand
     
   
 </title>
-<meta name="author" content="Dr. Siddharth Nand">
+<meta name="author" content="Siddharth Nand">
 <meta name="description" content="Materials for courses you taught. Replace this text with your description.">
 
-  <meta name="keywords" content="dr. siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance">
+  <meta name="keywords" content="siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance">
 
 
 
@@ -104,7 +104,7 @@
     <div class="container">
       
         <a class="navbar-brand title font-weight-lighter" href="/">
-          Dr. Siddharth Nand
+          Siddharth Nand
         </a>
       
       <!-- Navbar Toggle -->
@@ -150,8 +150,6 @@
             
           
             
-          
-            
               
                 
                 <li class="nav-item ">
@@ -175,13 +173,6 @@
           
             
           
-          
-            <!-- Search -->
-            <li class="nav-item">
-              <button id="search-toggle" title="Search" onclick="openSearchModal()">
-                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
-              </button>
-            </li>
           
           
             <!-- Toogle theme mode -->
@@ -241,13 +232,11 @@
 
     <div class="container">
       © Copyright 2025
-      Dr. Siddharth
+      Siddharth
       
       Nand. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
 
       
-      
-        Last updated: November 25, 2025.
       
     </div>
   </footer>
@@ -436,112 +425,8 @@
     
 
     
-  <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script>
-  <script>
-    addBackToTop();
-  </script>
-
 
     
-  <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script>
-  <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys>
-  <script>
-    let searchTheme = determineComputedTheme();
-    const ninjaKeys = document.querySelector('ninja-keys');
-
-    if (searchTheme === 'dark') {
-      ninjaKeys.classList.add('dark');
-    } else {
-      ninjaKeys.classList.remove('dark');
-    }
-
-    const openSearchModal = () => {
-      // collapse navbarNav if expanded on mobile
-      const $navbarNav = $('#navbarNav');
-      if ($navbarNav.hasClass('show')) {
-        $navbarNav.collapse('hide');
-      }
-      ninjaKeys.open();
-    };
-  </script>
-  <script>
-    // get the ninja-keys element
-    const ninja = document.querySelector('ninja-keys');
-
-    // add the home and posts menu items
-    ninja.data = [{
-        id: "nav-about",
-        title: "About",
-        section: "Navigation",
-        handler: () => {
-          window.location.href = "/";
-        },
-      },{id: "nav-publications",
-              title: "Publications",
-              description: "Publications by categories in reversed chronological order.",
-              section: "Navigation",
-              handler: () => {
-                window.location.href = "/publications/";
-              },
-            },{id: "projects-hyperparameter-optimized-latent-topic-model",
-              title: 'Hyperparameter Optimized Latent Topic Model',
-              description: "This project introduces a novel topic modeling approach with a custom likelihood function and flexible parameterization. Users can adjust how word frequencies influence topics and the model’s robustness to rare words.",
-              section: "Projects",handler: () => {
-                  window.location.href = "/projects/hyperparameter-optimized-latent-topic-model/";
-                },},{id: "projects-option-pricing-and-visualizer",
-              title: 'Option Pricing and Visualizer',
-              description: "Python package to assist in the pricing and analysis of financial options.",
-              section: "Projects",handler: () => {
-                  window.location.href = "/projects/option-quant/";
-                },},{id: "projects-portfolio-performance",
-              title: 'Portfolio Performance',
-              description: "Tool to test the out-of-sample performance of different portfolio optimization strategies.",
-              section: "Projects",handler: () => {
-                  window.location.href = "/projects/portfolio-optimization/";
-                },},{
-            id: 'socials-email',
-            title: 'Send email',
-            section: 'Socials',
-            handler: () => {
-              window.open("mailto:%73%6E%61%6E%64%32%33%33@%67%6D%61%69%6C.%63%6F%6D", "_blank");
-            },
-          },{
-            id: 'socials-github',
-            title: 'GitHub',
-            section: 'Socials',
-            handler: () => {
-              window.open("https://github.com/sidnand", "_blank");
-            },
-          },{
-          id: 'light-theme',
-          title: 'Change theme to light',
-          description: 'Change the theme of the site to Light',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("light");
-          },
-        },
-        {
-          id: 'dark-theme',
-          title: 'Change theme to dark',
-          description: 'Change the theme of the site to Dark',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("dark");
-          },
-        },
-        {
-          id: 'system-theme',
-          title: 'Use system default theme',
-          description: 'Change the theme of the site to System Default',
-          section: 'Theme',
-          handler: () => {
-            setThemeSetting("system");
-          },
-        },];
-  </script>
-  <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script>
-
 
   </body>
 </html>
