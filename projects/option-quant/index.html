@@ -34,9 +34,9 @@
   
 </title>
 <meta name="author" content="Siddharth Nand">
-<meta name="description" content="Python package to assist in the pricing and analysis of financial options.">
+<meta name="description" content="Python package for pricing options with binomial and Black–Scholes–Merton models, and analyzing option strategies.">
 
-  <meta name="keywords" content="siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance">
+  <meta name="keywords" content="siddharth, nand, statistics, Bayesian computation, Markov chain Monte Carlo, statistical inference, housing price index, data science, machine learning, portfolio optimization">
 
 
 
@@ -146,6 +146,18 @@
             
           
             
+              
+                
+                <li class="nav-item active">
+                  
+                  <a class="nav-link" href="/projects/">Projects
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                </li>
+              
+            
           
             
               
@@ -205,11 +217,23 @@
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">Option Pricing and Visualizer</h1>
-    <p class="post-description">Python package to assist in the pricing and analysis of financial options.</p>
+    <p class="post-description">Python package for pricing options with binomial and Black–Scholes–Merton models, and analyzing option strategies.</p>
   </header>
 
   <article>
-    <p>Under construction. Check back soon.</p>
+    <h2 id="overview">Overview</h2>
+
+<p>OptionQuant is a Python package for working with individual options and multi-leg strategies. Its <code class="language-plaintext highlighter-rouge">Option</code> class calculates profit and loss across underlying prices, while <code class="language-plaintext highlighter-rouge">OptionStrategy</code> combines positions and plots the resulting strategy payoff.</p>
+
+<p>For pricing, <code class="language-plaintext highlighter-rouge">OptionPricer</code> currently includes binomial and Black–Scholes–Merton models. Install the package with <code class="language-plaintext highlighter-rouge">pip install OptionQuant</code>, then create an option and price it:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">OptionQuant</span> <span class="k">as</span> <span class="n">oq</span>
+
+<span class="n">option</span> <span class="o">=</span> <span class="n">oq</span><span class="p">.</span><span class="nc">Option</span><span class="p">(</span><span class="sh">"</span><span class="s">put</span><span class="sh">"</span><span class="p">,</span> <span class="mi">140</span><span class="p">,</span> <span class="mi">141</span><span class="p">,</span> <span class="mf">8.15</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.07</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">oq</span><span class="p">.</span><span class="n">OptionPricer</span><span class="p">.</span><span class="nf">binomial_model</span><span class="p">(</span><span class="n">option</span><span class="p">,</span> <span class="n">risk_free_rate</span><span class="o">=</span><span class="mf">0.04</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>See the package on <a href="https://pypi.org/project/OptionQuant/" rel="external nofollow noopener" target="_blank">PyPI</a> or browse the <a href="https://github.com/sidnand/OptionQuant" rel="external nofollow noopener" target="_blank">source code</a>.</p>
 
   </article>
 

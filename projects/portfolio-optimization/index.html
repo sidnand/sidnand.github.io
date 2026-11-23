@@ -34,7 +34,7 @@
 <meta name="author" content="Siddharth Nand">
 <meta name="description" content="Tool to test the out-of-sample performance of different portfolio optimization strategies.">
 
-  <meta name="keywords" content="siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance">
+  <meta name="keywords" content="siddharth, nand, statistics, Bayesian computation, Markov chain Monte Carlo, statistical inference, housing price index, data science, machine learning, portfolio optimization">
 
 
 
@@ -127,7 +127,7 @@
       {
             "title": "Portfolio Performance",
             "description": "Tool to test the out-of-sample performance of different portfolio optimization strategies.",
-            "published": "January 31, 2026",
+            "published": "November 23, 2026",
             "authors": [
               
             ],
@@ -199,6 +199,18 @@
             
           
             
+              
+                
+                <li class="nav-item active">
+                  
+                  <a class="nav-link" href="/projects/">Projects
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                </li>
+              
+            
           
             
               
@@ -260,17 +272,11 @@
 
       <d-article>
         
-        <p><strong>Still under construction…</strong></p>
+        <h2 id="overview">Overview</h2>
 
-<p>This project comprises of three part, a Python package, a GUI and a web server. The package is the core of the project, it contains the functions to optimize the portfolio and to test the out-of-sample performance of the portfolio. The GUI is a simple interface to interact with the package, and the web server is a locally run api which fetches the latest data from the internet and runs the optimization and performance test.</p>
+<p>Portfolio Performance is a Python package for comparing portfolio-allocation strategies out of sample. It applies 11 models—including equal weighting, minimum-variance, mean-variance, and Bayesian strategies—to historical return data, then reports Sharpe ratios and statistical comparisons against a benchmark.</p>
 
-<p>Based on the paper: Optimal Versus Naive Diversification <d-cite key="demiguel2009optimal"></d-cite>. You can check out the PyPi page <a href="https://pypi.org/project/portfolioperformance/" rel="external nofollow noopener" target="_blank">here</a>.</p>
-
-<p>The GUI is available at <a href="https://sidnand.github.io//Portfolio-Lab/">sidnand.github.io/Portfolio-Lab/</a>.</p>
-
-<p>The web server is available on <a href="https://github.com/sidnand/Portfolio-Performance-Server" rel="external nofollow noopener" target="_blank">GitHub</a>.</p>
-
-<p>This project was went to turn the original research paper into a general purpose application that could be used by finance hobbiests and researchers alike. It includes 11 pre-built models and for the tech savvy, the ability to create their own models. The models included are talked about below.</p>
+<p>The project has three parts: the <a href="https://pypi.org/project/portfolioperformance/" rel="external nofollow noopener" target="_blank">Python package on PyPI</a>, the interactive <a href="https://sidnand.github.io//Portfolio-Lab/">Portfolio Lab</a>, and a <a href="https://github.com/sidnand/Portfolio-Performance-Server" rel="external nofollow noopener" target="_blank">companion server</a>. The work is inspired by DeMiguel, Garlappi, and Uppal’s <a href="https://doi.org/10.1093/rfs/hhm075" rel="external nofollow noopener" target="_blank">study of optimal versus naive diversification</a>.</p>
 
 <h2 id="models">Models</h2>
 
@@ -310,13 +316,21 @@
   <li>\(\mathbf{1}\) is a vector of ones, ensuring that the portfolio weights sum to 1.</li>
 </ul>
 
-<h3 id="minimum-varaince-with-shortsale-constraints">Minimum-varaince with shortsale constraints</h3>
+<h3 id="minimum-variance-with-short-sale-constraints">Minimum-variance with short-sale constraints</h3>
 
-<h3 id="minimum-varaince-with-generalized-constraints-jagannathan-ma">Minimum-varaince with generalized constraints (Jagannathan Ma)</h3>
+<p>This version minimizes portfolio variance while restricting each weight to the interval from zero to one, so the portfolio is fully invested and cannot take short positions:</p>
 
-<h3 id="kan-zhou-equal-weighted-model">Kan Zhou equal weighted model</h3>
+\[\mathbf{1}^{T}w = 1,\qquad 0 \leq w_i \leq 1.\]
 
-<h3 id="mean-varaince-markowitz-model">Mean-varaince (Markowitz) model</h3>
+<h3 id="jagannathanma-constrained-minimum-variance">Jagannathan–Ma constrained minimum variance</h3>
+
+<p>The Jagannathan–Ma implementation also minimizes variance under a full-investment constraint, with an additional lower bound of (1/(2n)) on each asset weight. This keeps every weight within the prescribed bounds rather than allowing unrestricted short positions.</p>
+
+<h3 id="kan-zhou-equal-weighted-model">Kan Zhou equal-weighted model</h3>
+
+<p>This covariance-based estimator blends equal weights with a minimum-variance allocation. The blend depends on the estimated covariance matrix and sample size, giving a data-adjusted alternative to the naive equal-weight benchmark.</p>
+
+<h3 id="mean-variance-markowitz-model">Mean-variance (Markowitz) model</h3>
 
 <p>The mean-variance optimization model seeks to maximize the return of a portfolio for a given level of risk, balancing expected returns and the variance of portfolio returns. <d-cite key="markowitz1952portfolio"></d-cite> This framework is central to portfolio theory, where the investor aims to select a portfolio that maximizes return while minimizing risk.</p>
 
@@ -340,13 +354,21 @@
 
 <p>This model allows investors to choose an optimal portfolio based on their risk preferences, adjusting the weight of each asset to achieve the desired return-risk trade-off.</p>
 
-<h3 id="mean-variance-with-shortsale-constraints">Mean-variance with shortsale constraints</h3>
+<h3 id="mean-variance-with-short-sale-constraints">Mean-variance with short-sale constraints</h3>
 
-<h3 id="kan-zhou-2007-three-fund-model">Kan Zhou (2007) “three-fund” model</h3>
+<p>This is the long-only version of the mean-variance objective above. It keeps the full-investment constraint and restricts each asset weight to (0 \leq w_i \leq 1), preventing short positions while retaining the risk-aversion parameter.</p>
+
+<h3 id="kan-zhou-2007-three-fund-model">Kan Zhou (2007) three-fund model</h3>
+
+<p>The Kan–Zhou model adjusts mean-variance allocation for uncertainty in estimated returns. In this implementation, the risk-aversion parameter controls a combination of the estimated tangency-portfolio direction and the global minimum-variance direction. <d-cite key="kan2007optimal"></d-cite></p>
 
 <h3 id="bayes-stein">Bayes-Stein</h3>
 
+<p>The Bayes–Stein model replaces raw sample estimates with shrinkage-adjusted estimates of expected returns and covariance, then uses them in a mean-variance allocation. This is intended to reduce the effect of estimation error in portfolio inputs.</p>
+
 <h3 id="bayes-stein-with-shortsale-constraints">Bayes-Stein with shortsale constraints</h3>
+
+<p>This applies the same Bayes–Stein estimates as the unconstrained version, while restricting weights to be nonnegative and sum to one. The resulting portfolio uses shrinkage-adjusted inputs without taking short positions.</p>
 
 <h3 id="mackinlay-and-pastors-2000">MacKinlay and Pastor’s (2000)</h3>
 

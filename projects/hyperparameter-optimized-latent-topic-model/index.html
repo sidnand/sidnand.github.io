@@ -34,7 +34,7 @@
 <meta name="author" content="Siddharth Nand">
 <meta name="description" content="This project introduces a novel topic modeling approach with a custom likelihood function and flexible parameterization. Users can adjust how word frequencies influence topics and the model’s robustness to rare words.">
 
-  <meta name="keywords" content="siddharth, nand, portfolio, mathematics, computer-science, statistics, portfolio-performance">
+  <meta name="keywords" content="siddharth, nand, statistics, Bayesian computation, Markov chain Monte Carlo, statistical inference, housing price index, data science, machine learning, portfolio optimization">
 
 
 
@@ -127,7 +127,7 @@
       {
             "title": "Hyperparameter Optimized Latent Topic Model",
             "description": "This project introduces a novel topic modeling approach with a custom likelihood function and flexible parameterization. Users can adjust how word frequencies influence topics and the model’s robustness to rare words.",
-            "published": "January 31, 2026",
+            "published": "November 23, 2026",
             "authors": [
               
             ],
@@ -199,6 +199,18 @@
             
           
             
+              
+                
+                <li class="nav-item active">
+                  
+                  <a class="nav-link" href="/projects/">Projects
+                    
+                      <span class="sr-only">(current)</span>
+                    
+                  </a>
+                </li>
+              
+            
           
             
               
@@ -260,7 +272,13 @@
 
       <d-article>
         
-        <p><strong>Still under construction…</strong></p>
+        <h2 id="overview">Overview</h2>
+
+<p>This project explores a Bayesian topic model that represents each document as a mixture of topics and each topic as a distribution over words. Its custom likelihood exposes two controls: <code class="language-plaintext highlighter-rouge">alpha</code> sets how strongly word counts influence the model, while <code class="language-plaintext highlighter-rouge">beta</code> smooths word probabilities to reduce zero-probability issues and improve treatment of rare words.</p>
+
+<p>The model is implemented in Stan. The accompanying R Markdown report applies it to financial-news headlines, compares the results with latent Dirichlet allocation (LDA), and checks inference diagnostics.</p>
+
+<p>Read the <a href="https://github.com/sidnand/Hyperparameter-Optimized-Latent-Topic-Model/blob/main/project.pdf" rel="external nofollow noopener" target="_blank">project report</a>, inspect the <a href="https://github.com/sidnand/Hyperparameter-Optimized-Latent-Topic-Model/blob/main/model.stan" rel="external nofollow noopener" target="_blank">Stan model</a>, or browse the <a href="https://github.com/sidnand/Hyperparameter-Optimized-Latent-Topic-Model" rel="external nofollow noopener" target="_blank">complete repository</a>.</p>
 
       </d-article>
 
