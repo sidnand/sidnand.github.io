@@ -2,11 +2,11 @@
 layout: about
 title: About
 permalink: /
-subtitle: Vancouver, Canada
+subtitle: Toronto, Canada
 
 profile:
   align: right
-  image: 
+  image: profile-pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
@@ -15,4 +15,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 ---
 
-<!-- Dr. Siddharth Nand holds a Ph.D. in Statistics from the University of British Columbia, where his research focused on scalable Bayesian inference, distributed computation, and probabilistic modelling. His work spans the development of parallel inference algorithms, dimension-scalable sampling methods, and efficient optimization techniques for structured and sequential models. He is broadly interested in the intersection of statistical methodology, machine learning, and large-scale computational systems. He also enjoys dabbling in applied areas like quantitative finance and econometrics. -->
+Siddharth Nand is a Data Scientist at Teranet. His work spans valuation models, price measurement, statistical inference, uncertainty quantification, and, more broadly, applied AI research, drawing on both classical statistics and modern machine learning. He is the lead methodologist and technical owner for the Teranet-National Bank House Price Index.
+
+Siddharth holds a Ph.D. in Statistics and a B.Sc. in Mathematics from the University of British Columbia. His research focuses on Bayesian computation and Markov chain Monte Carlo theory, studying how finite-precision arithmetic, noisy likelihoods, and early stopping affect Metropolis-type samplers, how their bias scales with sample size, and how to compute guarantees on the remaining bias using perturbation theory, coupling, and posterior concentration.

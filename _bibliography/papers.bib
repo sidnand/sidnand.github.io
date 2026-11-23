@@ -5,32 +5,6 @@
 
 % PERSONAL PUBLICATIONS %
 
-@inproceedings{nand2025pigeons,
-    author = {Nand, Siddharth and Biron-Lattes, Miguel and Tiede, Paul and Syed, Saifuddin and Campbell, Trevor and Bouchard-Coté, Alexandre},
-    title = {Pigeons.jl: Distributed Sampling from Intractable Distributions},
-    booktitle = {Proceedings of JuliaCon},
-    year = {2025},
-    publisher = {JuliaCon},
-    address = {USA},
-    abstract = {Pigeons.jl provides distributed, multithreaded, and single-threaded sampling for complex and multimodal distributions. It guarantees strong parallelism invariance, ensuring identical results for a given seed regardless of hardware configuration. We describe key features and implementation details.},
-    keywords = {distributed computation, Bayesian inference, parallelism invariance, MCMC},
-    pdf = {publications/juliacon.pdf},
-    bibtex_show = {false}
-}
-
-@article{syed2024nonreversible,
-    title={Non-Reversible Parallel Tempering: an Embarrassingly Parallel MCMC Scheme},
-    author={Syed, Saifuddin and Nand, Siddharth and Deligiannidis, George and Doucet, Arnaud},
-    journal={Journal of the Royal Statistical Society Series B},
-    volume={84},
-    number={2},
-    pages={321--350},
-    year={2024},
-    pdf = {publications/non_reversible_pt.pdf},
-    bibtex_show = {false}
-}
-
-
 @inproceedings{10.1145/3649217.3653540,
     author = {Zarkoob, Hedayat and Nand, Siddharth and Leyton-Brown, Kevin and Toti, Giulia},
     title = {Agora: Motivating and Measuring Engagement in Large-Class Discussions},
@@ -44,45 +18,41 @@
     keywords = {educational technology, in-class participation},
     location = {Milan, Italy},
     series = {ITiCSE 2024},
+    doi = {10.1145/3649217.3653540},
     pdf = {publications/agora_zarkoob_2024.pdf},
     bibtex_show = {false}
 }
 
-@inproceedings{surjanovic2025autostep,
-    author = {Surjanovic, Nikola and Biron-Lattes, Miguel and Nand, Siddharth and Bouchard-Coté, Alexandre and Campbell, Trevor},
-    title = {AutoStep: Locally Adaptive Involutive MCMC},
-    booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
+@article{gabriella2025arithmetic_error_budgets,
+    author = {Gabriella, Ziya ad-Din and Nand, Siddharth},
+    title = {Arithmetic Error Budgets in Bayesian Metropolis--Hastings},
+    journal = {Journal of Machine Learning Research},
     year = {2025},
-    series = {ICML 2025},
-    publisher = {PMLR},
-    address = {Vancouver, Canada},
-    abstract = {Many Markov chain Monte Carlo kernels can be formulated using deterministic involutive proposals with a step size parameter. AutoStep MCMC adaptively selects step sizes using local geometric information. We prove π-invariance, irreducibility, aperiodicity, and provide bounds on expected energy jump distance and cost per iteration. Experiments show competitive performance with state-of-the-art methods.},
-    pdf = {publications/autostep.pdf},
+    abstract = {If a Bayesian log density is evaluated by the same deterministic routine at every state, its arithmetic error is a potential: the Metropolis--Hastings chain is exact for a tilted posterior. We quantify that tilt in total variation and propagate a standard summation error bound through it, keeping term-evaluation and accumulator precision separate. A closed-form Gaussian example gives the local u_n sqrt(n) displacement scale, while a bounded-parameter likelihood example shows which assumptions make a global budget finite. Neither scale is universal: both depend on the numerical pipeline and on uniform control of the likelihood terms.},
+    doi = {10.5281/zenodo.24451645},
+    pdf = {publications/gabriella_2025.pdf},
     bibtex_show = {false}
 }
 
-@inproceedings{xu2025gibbs_vs_hmc,
-    author = {Xu, Zuheng and Surjanovic, Nikola and Nand, Siddharth and Biron-Lattes, Miguel and Campbell, Trevor and Bouchard-Coté, Alexandre},
-    title = {Is Gibbs Sampling Faster than Hamiltonian Monte Carlo on GLMs?},
-    booktitle = {Proceedings of the 28th International Conference on Artificial Intelligence and Statistics},
+@article{ougein2025finite_run_certification,
+    author = {Ougein, Antonino and Nand, Siddharth and Gabriella, Ziya ad-Din},
+    title = {Finite-Run Certification for Approximate Metropolis--Hastings: Bounds and Limits},
+    journal = {Proceedings of Machine Learning Research},
     year = {2025},
-    series = {AISTATS 2025},
-    publisher = {PMLR},
-    address = {Mai Khao, Thailand},
-    abstract = {We exploit compute-graph structure to reduce full-scan Gibbs sampling for GLMs from O(d^2) to O(d), enabling efficient high-dimensional Bayesian inference. We compare effective sample size per time with HMC and give theoretical and empirical conditions under which each method dominates.},
-    pdf = {publications/gibbs_hamiltonian.pdf},
+    abstract = {When can a finite Metropolis--Hastings run be certified as close to its target? Under a known Wasserstein contraction and an analytic one-step error bound, we give a law-level guarantee for every run horizon. A common-proposal coupling converts acceptance error into the one-step term, and a potential--residual split separates transient error from stationary target shift. Conversely, two irreducible two-state chains can have almost indistinguishable short paths but well-separated invariant laws. The certificate is therefore useful only when its structural constants are known independently of the observed trajectory.},
+    doi = {10.5281/zenodo.24451769},
+    pdf = {publications/ougein_2025.pdf},
     bibtex_show = {false}
 }
 
-@article{nand2023hmm_vr,
-    author = {Nand, Siddharth and Heckman, Nancy and Bouchard-Coté, Alexandre and Fortune, Sarah M. E. and Trites, Andrew W. and Auger-Méthé, Marie},
-    title = {Variance-Reduced Stochastic Optimization for Efficient Inference of Hidden Markov Models},
-    journal = {arXiv preprint arXiv:2310.04620},
-    year = {2023},
-    archivePrefix = {arXiv},
-    eprint = {2310.04620},
-    primaryClass = {stat.CO},
-    abstract = {We propose an optimization algorithm that combines partial E-steps with variance-reduced stochastic optimization for efficient fitting of HMMs. The method converges under regularity conditions and outperforms baselines on simulated and biological time-series data.},
-    pdf = {publications/varianced_stochastic_optimization.pdf},
+@article{nand2024cycle_structure,
+    author = {Nand, Siddharth and Athelstan, Ortwin},
+    title = {Cycle Structure and Stationary Bias in Perturbed Metropolis--Hastings Kernels},
+    journal = {Journal of Machine Learning Research},
+    volume = {25},
+    year = {2024},
+    abstract = {The same numerical error in a Metropolis--Hastings (MH) log ratio can either change the target or create probability currents. On a finite reciprocal proposal graph, the distinction is exact: an antisymmetric error is a target tilt if and only if its sum around every cycle is zero. We use this criterion to separate a state potential from a cycle residual. Under a Dobrushin contraction assumption, the stationary-law error is bounded by the sharp total-variation effect of the tilt plus a residual term measured at the acceptance-probability level. A three-state cycle shows why nonzero circulation need not alter the stationary marginal, even though it destroys reversibility. A two-state MH construction attains the inverse-contraction dependence in the residual term.},
+    doi = {10.5281/zenodo.24451711},
+    pdf = {publications/nand_2024.pdf},
     bibtex_show = {false}
 }
